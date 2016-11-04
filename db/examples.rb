@@ -56,3 +56,22 @@ Movie.create([
                  audience_tomato_score: 98,
                  audience_reviews: 30_000 }
              ])
+
+Screening.create([
+                   { rating: 5,
+                     watched_recently: true,
+                     user_id: 2,
+                     movie_id: 1 },
+                   { rating: 5,
+                     watched_recently: false,
+                     user_id: 3,
+                     movie_id: 2 },
+                   { rating: 4,
+                     watched_recently: false,
+                     user_id: 3,
+                     movie_id: 3 },
+                   { rating: 4,
+                     watched_recently: false,
+                     user_id: 2,
+                     movie_id: 3 }
+                 ])
