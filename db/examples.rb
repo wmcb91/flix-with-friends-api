@@ -16,3 +16,13 @@
                password: 'abc123',
                password_confirmation: 'abc123')
 end
+
+%w(brian jeff chris will).each do |name|
+  user_name = "#{name}man123"
+  given_name = name.to_s
+  surname = "#{name}iams"
+  Profile.create!(user_name: user_name,
+                  given_name: given_name,
+                  surname: surname,
+                  user_id: rand(3) + 1)
+end
