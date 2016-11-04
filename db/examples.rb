@@ -26,3 +26,33 @@ end
                   surname: surname,
                   user_id: rand(3) + 1)
 end
+
+Movie.create([
+               { title: 'Rocky',
+                 director: 'Sylvester Stallone',
+                 year_released: 1981,
+                 genre: 'Drama',
+                 imdb_rating: 8.9,
+                 critic_tomato_meter: 94,
+                 critic_reviews: 103,
+                 audience_tomato_score: 98,
+                 audience_reviews: 30_000 },
+               { title: 'Rocky 2',
+                 director: 'Sylvester Stallone',
+                 year_released: 1982,
+                 genre: 'Drama',
+                 imdb_rating: 8.8,
+                 critic_tomato_meter: 94,
+                 critic_reviews: 103,
+                 audience_tomato_score: 98,
+                 audience_reviews: 30_000 },
+               { title: 'Rocky 3',
+                 director: 'Sylvester Stallone',
+                 year_released: 1983,
+                 genre: 'Drama',
+                 imdb_rating: 8.6,
+                 critic_tomato_meter: 94,
+                 critic_reviews: 103,
+                 audience_tomato_score: 98,
+                 audience_reviews: 30_000 }
+             ])
