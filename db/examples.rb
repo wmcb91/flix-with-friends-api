@@ -17,15 +17,24 @@
                password_confirmation: 'abc123')
 end
 
-%w(brian jeff chris will).each do |name|
-  user_name = "#{name}man123"
-  given_name = name.to_s
-  surname = "#{name}iams"
-  Profile.create!(user_name: user_name,
-                  given_name: given_name,
-                  surname: surname,
-                  user_id: rand(3) + 1)
-end
+Profile.create([
+                 { user_name: 'brianman123',
+                   given_name: 'brian',
+                   surname: 'brianiams',
+                   user_id: 1 },
+                 { user_name: 'jeffman123',
+                   given_name: 'jeff',
+                   surname: 'jeffiams',
+                   user_id: 2 },
+                 { user_name: 'chrisman123',
+                   given_name: 'chris',
+                   surname: 'chrisiams',
+                   user_id: 3 },
+                 { user_name: 'willman123',
+                   given_name: 'will',
+                   surname: 'williams',
+                   user_id: 4 }
+               ])
 
 Movie.create([
                { title: 'Rocky',
