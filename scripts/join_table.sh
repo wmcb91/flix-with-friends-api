@@ -7,4 +7,4 @@ INNER JOIN movies m
 
 
 Options
-WHERE l.fin > ‘2016-09-26'
+WHERE s.rating > 2
