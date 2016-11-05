@@ -13,8 +13,8 @@
   email = "#{name}@#{name}.com"
   next if User.exists? email: email
   User.create!(email: email,
-               password: 'abc123',
-               password_confirmation: 'abc123')
+               password: '123',
+               password_confirmation: '123')
 end
 
 Profile.create([
