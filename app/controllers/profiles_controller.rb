@@ -18,7 +18,7 @@ class ProfilesController < ProtectedController
   # POST /profiles
   # POST /profiles.json
   def create
-    @profile = Profile.new(profile_params)
+    @profile = current_user.build_profile(create_profile_params)
 
     if @profile.save
       render json: @profile, status: :created, location: @profile
@@ -30,9 +30,9 @@ class ProfilesController < ProtectedController
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
   def update
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profiles.build(profile_params)
 
-    if @profile.update(profile_params)
+    if @profile.update(update_profile_params)
       head :no_content
     else
       render json: @profile.errors, status: :unprocessable_entity
@@ -50,13 +50,18 @@ class ProfilesController < ProtectedController
   private
 
   def set_profile
-    @profile = current_user.profiles.find(params[:id])
+    @profile = current_user.profile
   end
 
-  def profile_params
+  def create_profile_params
     params.require(:profile).permit(:user_name,
                                     :given_name,
                                     :surname,
                                     :user_id)
+  end
+
+  def update_profile_params
+    params.require(:profile).permit(:given_name,
+                                    :surname)
   end
 end

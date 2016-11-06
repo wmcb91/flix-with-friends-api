@@ -9,7 +9,7 @@
 # cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 # Mayor.create(name: 'Emanuel', city: cities.first)
 
-%w(brian jeff chris will).each do |name|
+%w(brian jeff chris will dan).each do |name|
   email = "#{name}@#{name}.com"
   next if User.exists? email: email
   User.create!(email: email,

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 curl --include --request POST http://localhost:4741/screenings \
-  --header "Authorization: Token token=BAhJIiU5NTE5NmRiYzUxOTIyZTA4OTNhMzUxZDJmYjBkNjM2NAY6BkVG--56d992b36dcce66d6527417cfb8adf68e032d53c" \
+  --header "Authorization: Token token=BAhJIiUxNWIwMTFkNzgwNTg3NTI5N2U2NTQwMWMxZDFkYzI4MAY6BkVG--178c0ca881980405ffcaa644fdac5a344b9924f5" \
   --header "Content-Type: application/json" \
   --data '{
     "screening": {
