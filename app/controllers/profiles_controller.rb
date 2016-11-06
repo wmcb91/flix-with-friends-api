@@ -1,4 +1,4 @@
-class ProfilesController < ApplicationController
+class ProfilesController < ProtectedController
   before_action :set_profile, only: [:show, :update, :destroy]
 
   # GET /profiles
@@ -49,14 +49,14 @@ class ProfilesController < ApplicationController
 
   private
 
-    def set_profile
-      @profile = Profile.find(params[:id])
-    end
+  def set_profile
+    @profile = current_user.profiles.find(params[:id])
+  end
 
-    def profile_params
-      params.require(:profile).permit(:user_name,
-                                      :given_name,
-                                      :surname,
-                                      :user_id)
-    end
+  def profile_params
+    params.require(:profile).permit(:user_name,
+                                    :given_name,
+                                    :surname,
+                                    :user_id)
+  end
 end
