@@ -32,7 +32,7 @@ class ScreeningsController < ProtectedController
   # PATCH/PUT /screenings/1
   # PATCH/PUT /screenings/1.json
   def update
-    @screening = Screening.find(params[:id])
+    # @screening = Screening.find(params[:id])
 
     if @screening.update(update_screening_params)
       head :no_content

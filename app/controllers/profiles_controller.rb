@@ -3,11 +3,11 @@ class ProfilesController < ProtectedController
 
   # GET /profiles
   # GET /profiles.json
-  # def index
-  #   @profiles = Profile.all
+  def index
+    @profiles = Profile.all
 
-  #   render json: @profiles
-  # end
+    render json: @profiles
+  end
 
   # GET /profiles/1
   # GET /profiles/1.json
