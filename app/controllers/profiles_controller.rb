@@ -3,11 +3,11 @@ class ProfilesController < ProtectedController
 
   # GET /profiles
   # GET /profiles.json
-  def index
-    @profiles = Profile.all
+  # def index
+  #   @profiles = Profile.all
 
-    render json: @profiles
-  end
+  #   render json: @profiles
+  # end
 
   # GET /profiles/1
   # GET /profiles/1.json
@@ -30,8 +30,6 @@ class ProfilesController < ProtectedController
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
   def update
-    @profile = current_user.profiles.build(profile_params)
-
     if @profile.update(update_profile_params)
       head :no_content
     else
@@ -41,11 +39,11 @@ class ProfilesController < ProtectedController
 
   # DELETE /profiles/1
   # DELETE /profiles/1.json
-  def destroy
-    @profile.destroy
+  # def destroy
+  #   @profile.destroy
 
-    head :no_content
-  end
+  #   head :no_content
+  # end
 
   private
 
