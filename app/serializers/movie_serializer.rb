@@ -4,6 +4,7 @@ class MovieSerializer < ActiveModel::Serializer
              :director,
              :year_released,
              :genre,
+             :rating,
              :imdb_rating,
              :critic_tomato_meter,
              :critic_reviews,
