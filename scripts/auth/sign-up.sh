@@ -15,6 +15,7 @@ curl --include --request POST http://localhost:4741/sign-up \
   --data '{
     "credentials": {
       "email": "dunkey@dunk.com",
+      "username": "dunkeyman123",
       "password": "123",
       "password_confirmation": "123"
     }

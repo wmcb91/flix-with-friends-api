@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
   has_one :profile
   has_many :movies, through: :screenings
   has_many :screenings
+  validates :username, uniqueness: { message: 'this user name already exists' }
 end

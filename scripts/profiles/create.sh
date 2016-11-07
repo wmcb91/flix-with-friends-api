@@ -3,7 +3,6 @@ curl --include --request POST http://localhost:4741/profiles \
   --header "Content-Type: application/json" \
   --data '{
     "profile": {
-      "user_name": "dandman123",
       "given_name": "dan",
       "surname": "daniels"
     }

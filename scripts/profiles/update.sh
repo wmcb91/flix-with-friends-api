@@ -5,7 +5,6 @@ curl --include --request PATCH http://localhost:4741/profiles/6 \
   --header "Content-Type: application/json" \
   --data '{
     "profile": {
-      "user_name": "dunkeyguy",
       "given_name": "dan",
       "surname": "danielson"
     }

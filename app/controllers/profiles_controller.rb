@@ -52,8 +52,7 @@ class ProfilesController < ProtectedController
   end
 
   def create_profile_params
-    params.require(:profile).permit(:user_name,
-                                    :given_name,
+    params.require(:profile).permit(:given_name,
                                     :surname,
                                     :user_id)
   end

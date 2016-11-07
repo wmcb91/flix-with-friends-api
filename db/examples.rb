@@ -11,29 +11,30 @@
 
 %w(brian jeff chris will dan).each do |name|
   email = "#{name}@#{name}.com"
+  username = "#{name}man12"
   next if User.exists? email: email
   User.create!(email: email,
+               username: username,
                password: '123',
                password_confirmation: '123')
 end
 
 Profile.create([
-                 { user_name: 'brianman123',
-                   given_name: 'brian',
+                 { given_name: 'brian',
                    surname: 'brianiams',
                    user_id: 1 },
-                 { user_name: 'jeffman123',
-                   given_name: 'jeff',
+                 { given_name: 'jeff',
                    surname: 'jeffiams',
                    user_id: 2 },
-                 { user_name: 'chrisman123',
-                   given_name: 'chris',
+                 { given_name: 'chris',
                    surname: 'chrisiams',
                    user_id: 3 },
-                 { user_name: 'willman123',
-                   given_name: 'will',
+                 { given_name: 'will',
                    surname: 'williams',
-                   user_id: 4 }
+                   user_id: 4 },
+                 { given_name: 'dan',
+                   surname: 'daniels',
+                   user_id: 5 }
                ])
 
 Movie.create([
