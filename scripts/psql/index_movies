@@ -1,0 +1,12 @@
+SELECT id,
+       title,
+       director,
+       year_released,
+       rating,
+       genre,
+       imdb_rating,
+       critic_tomato_meter,
+       audience_tomato_score
+
+       FROM movies
+       ORDER BY year_released;
