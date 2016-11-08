@@ -60,14 +60,14 @@ class ScreeningsController < ProtectedController
   # end
 
   def create_screening_params
-    params.require(:screening).permit(:rating,
+    params.require(:screening).permit(:user_rating,
                                       :watched_recently,
                                       :user_id,
                                       :movie_id)
   end
 
   def update_screening_params
-    params.require(:screening).permit(:rating,
+    params.require(:screening).permit(:user_rating,
                                       :watched_recently)
   end
 end
