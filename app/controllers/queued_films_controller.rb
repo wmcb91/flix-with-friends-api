@@ -1,4 +1,4 @@
-class QueuedFilmsController < ApplicationController
+class QueuedFilmsController < ProtectedController
   before_action :set_queued_film, only: [:show, :update, :destroy]
 
   # GET /queued_films
