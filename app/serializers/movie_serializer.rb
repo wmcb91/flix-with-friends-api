@@ -11,8 +11,8 @@ class MovieSerializer < ActiveModel::Serializer
              :audience_tomato_score,
              :audience_reviews,
              :users,
-             :screenings,
-             :queued_films
+             :screenings
+  #  :queued_films
 
   def users
     object.users.pluck(:id)

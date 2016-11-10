@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :email, :movies, :screenings
+  attributes :id, :username, :email, :movies # , :screenings
   has_one :profile
 
   def movies

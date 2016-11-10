@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :queued_films, except: [:new, :edit]
+  # resources :queued_films, except: [:new, :edit]
   resources :screenings, except: [:new, :edit]
   resources :movies, only: [:index, :show]
   resources :profiles, except: [:new, :edit]
