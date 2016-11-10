@@ -38,6 +38,38 @@ Profile.create([
                ])
 
 Movie.create([
+              { title: 'Citizen Kane',
+                director: 'Orson Welles',
+                year_released: 1941,
+                genre: 'Drama',
+                rating: 'PG',
+                imdb_rating: 8.4,
+                critic_tomato_meter: 100 },
+
+              { title: 'The Godfather',
+                director: 'Francis Ford Coppola',
+                year_released: 1972,
+                genre: 'Drama',
+                rating: 'R',
+                imdb_rating: 9.2,
+                critic_tomato_meter: 100 },
+
+              { title: 'Casablanca',
+                director: 'Michael Curtiz',
+                year_released: 1943,
+                genre: 'Drama',
+                rating: 'PG',
+                imdb_rating: 8.6,
+                critic_tomato_meter: 97 },
+
+              { title: 'Star Wars: Episode IV',
+                director: 'George Lucas',
+                year_released: 1977,
+                genre: 'Science Fiction',
+                rating: 'PG',
+                imdb_rating: 8.7,
+                critic_tomato_meter: 93 },
+
                { title: 'Rocky',
                  director: 'John G. Avildsen',
                  year_released: 1976,
@@ -81,17 +113,6 @@ Movie.create([
                  critic_reviews: 245,
                  audience_tomato_score: 82,
                  audience_reviews: 68_259 },
-
-               { title: 'Sausage Party',
-                 director: 'Conrad Vernon',
-                 year_released: 2016,
-                 genre: 'Comedy',
-                 rating: 'R',
-                 imdb_rating: 6.5,
-                 critic_tomato_meter: 83,
-                 critic_reviews: 167,
-                 audience_tomato_score: 56,
-                 audience_reviews: 55_774 },
 
                { title: 'Titanic',
                  director: 'James Cameron',
